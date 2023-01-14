@@ -2,7 +2,6 @@ import React from "react";
 import { useEffect, useState } from "react";
 import ItemList from "../item_list/ItemList";
 import { useParams } from "react-router-dom";
-import Loader from "../loader/Loader";
 import {
   getFirestore,
   collection,
@@ -28,13 +27,7 @@ const ItemListContainer = () => {
     });
   }, [category]);
 
-  return (
-    <div className="container">
-      <div className="row ">
-        {loading ? <Loader /> : <ItemList listProducts={listProducts} />}
-      </div>
-    </div>
-  );
+  return <div className="container"></div>;
 };
 
 export default ItemListContainer;

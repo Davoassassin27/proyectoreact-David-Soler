@@ -2,7 +2,6 @@ import React from "react";
 import ItemDetail from "../item_detail/ItemDetail";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Loader from "../loader/Loader";
 import { getDoc, doc, getFirestore } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
@@ -20,13 +19,7 @@ const ItemDetailContainer = () => {
     });
   }, [id]);
 
-  return (
-    <div>
-      <div>
-        {loading ? <Loader /> : <ItemDetail listProducts={listProducts} />}
-      </div>
-    </div>
-  );
+  return <div></div>;
 };
 
 export default ItemDetailContainer;
